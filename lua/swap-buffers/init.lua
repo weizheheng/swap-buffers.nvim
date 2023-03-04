@@ -27,6 +27,7 @@ function SwapBuffers.swap_buffers(with)
       vim.cmd("b " .. target_buffer)
       vim.fn.win_gotoid(target_window)
       vim.cmd("b " .. current_buffer)
+      vim.fn.win_gotoid(current_window)
     end
   else
     print("argument needs to be one of [hjkl]")
